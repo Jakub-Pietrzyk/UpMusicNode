@@ -1,0 +1,9 @@
+<div class="container">
+  <a href="/#/songs/new">Dodaj piosenkę</a>
+  <ul>
+    <li ng-repeat="song in songs">
+      <strong>{{ song.title }}: </strong>
+      <span>{{ song.note }}</span>
+    </li>
+  </ul>
+</div>
