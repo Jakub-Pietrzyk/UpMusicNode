@@ -1,8 +1,60 @@
-@require "config/colors.styl"
 
 .main-menu
-  background-color dark-blue
+  background-color: $dark_blue
+  color: $beige;
 
+.logo
+  font-size: 25px;
 
+li.nav-item
+  cursor: pointer
 
+a.nav-link
+  text-align: center
+  border-radius: 25px
+  transition: background-color 0.1s
+  -webkit-transition: background-color 0.1s
+  &:hover
+    background-color: $navbar_dark_blue
 
+.dropdown-menu
+  background-color: $beige
+
+.dropdown-item
+  cursor: pointer
+  color: $dark_blue
+  -webkit-transition: background-color 0.2s
+  transition: background-color 0.2s
+  &:hover
+    background-color: $beige_light
+    color: $dark_blue
+
+.avatar
+  border-radius: 50%
+
+.hamburger
+  cursor: pointer
+  width: 40px
+  padding: 0
+
+.hamburger-item
+  height: 5px
+  width: 100%
+  border-radius: 25px
+  background-color: $beige
+  margin: 5px 1px
+
+.dropdown .dropdown-menu
+  -webkit-transition: all 0.3s
+  -moz-transition: all 0.3s
+  -ms-transition: all 0.3s
+  -o-transition: all 0.3s
+  transition: all 0.3s
+  max-height: 0
+  display: block
+  overflow: hidden
+  opacity: 0
+
+.dropdown.show .dropdown-menu
+  max-height: 300px
+  opacity: 1
