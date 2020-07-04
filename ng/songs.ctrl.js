@@ -1,5 +1,5 @@
 angular.module("app")
-  .controller("SongsCtrl", function ($scope, SongsSvc){
+  .controller("SongsCtrl", function ($scope, SongsSvc, $routeParams){
 
     $scope.getSongs = function(){
       SongsSvc.getAll().success(function(songs){
@@ -20,5 +20,10 @@ angular.module("app")
       }
     };
 
-    $scope.getSongs();
+    $scope.getSong = function(){
+      id = $routeParams.id
+      SongsSvc.getOne(id).success(function(song){
+        $scope.song = song;
+      })
+    }
   });

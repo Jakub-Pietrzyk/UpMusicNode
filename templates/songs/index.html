@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container" ng-init="getSongs()">
   <ul>
     <li ng-repeat="song in songs">
-      <strong>{{ song.title }}: </strong>
+      <a ng-href="/#/songs/{{song._id}}">{{ song.title }}</a>:
       <span>{{ song.note }}</span>
     </li>
   </ul>

@@ -9,4 +9,8 @@ angular.module("app")
       return $http.post("/api/songs/create", song);
     }
 
+    this.getOne = function(id){
+      return $http.get("/api/songs/"+id);
+    }
+
   });

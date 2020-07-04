@@ -21,4 +21,11 @@ router.post("/create", function(req,res,next){
   });
 });
 
+router.get("/:id", function(req,res,next){
+  Song.findById(req.params.id).exec(function(err, song){
+    if(err) return next(err);
+    res.json(song);
+  });
+});
+
 module.exports = router;
