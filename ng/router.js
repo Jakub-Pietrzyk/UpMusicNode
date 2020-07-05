@@ -5,4 +5,5 @@ angular.module("app")
       .when("/songs", {controller: "SongsCtrl", templateUrl: "songs/index.html"})
       .when("/songs/new", {controller: "SongsCtrl", templateUrl: "songs/new.html"})
       .when("/songs/:id", {controller: "SongsCtrl", templateUrl: "songs/show.html"})
+      .when("/songs/:id/edit", {controller: "SongsCtrl", templateUrl: "songs/edit.html"})
   });

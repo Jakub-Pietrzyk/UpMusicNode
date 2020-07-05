@@ -5,12 +5,16 @@ angular.module("app")
       return $http.get("/api/songs");
     }
 
+    this.getOne = function(id){
+      return $http.get("/api/songs/"+id);
+    }
+
     this.create = function(song){
       return $http.post("/api/songs/create", song);
     }
 
-    this.getOne = function(id){
-      return $http.get("/api/songs/"+id);
+    this.update = function(song){
+      return $http.post("/api/songs/" + song.id + "/update", song);
     }
 
   });

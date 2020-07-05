@@ -1,0 +1,12 @@
+<form ng-submit="submit(action)">
+  <div class="form-group">
+    <input type="hidden" ng-model="$parent.id">
+    <label>Tytuł</label>
+    <input class="form-control" type="text" ng-model="$parent.title">
+  </div>
+  <div class="form-group">
+    <label>Notka</label>
+    <textarea class="form-control" ng-model="$parent.note"></textarea>
+  </div>
+  <input class="btn btn-success btn-lg btn-block" type="submit" value="Zapisz">
+</form>

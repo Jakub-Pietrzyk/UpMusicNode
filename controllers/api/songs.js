@@ -9,6 +9,13 @@ router.get("/",function(req, res, next){
   });
 });
 
+router.get("/:id", function(req,res,next){
+  Song.findById(req.params.id).exec(function(err, song){
+    if(err) return next(err);
+    res.json(song);
+  });
+});
+
 router.post("/create", function(req,res,next){
   var song = new Song({
     title: req.body.title,
@@ -21,10 +28,10 @@ router.post("/create", function(req,res,next){
   });
 });
 
-router.get("/:id", function(req,res,next){
-  Song.findById(req.params.id).exec(function(err, song){
+router.post("/:id/update", function(req,res,next){
+  Song.findByIdAndUpdate(req.params.id, req.body, {upsert: true}, function(err, song){
     if(err) return next(err);
-    res.json(song);
+    res.json(201, song);
   });
 });
 

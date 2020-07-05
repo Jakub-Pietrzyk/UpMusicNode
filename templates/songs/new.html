@@ -1,15 +1,5 @@
-<div class="container">
+<div class="container" ng-init="newSong()">
   <h1>Dodaj piosenkę</h1>
   <br>
-  <form ng-submit="addSong()">
-    <div class="form-group">
-      <label>Tytuł</label>
-      <input class="form-control" type="text" ng-model="title">
-    </div>
-    <div class="form-group">
-      <label>Notka</label>
-      <textarea class="form-control" ng-model="note"></textarea>
-    </div>
-    <input class="btn btn-success btn-lg btn-block" type="submit" value="Dodaj">
-  </form>
+  <div ng-include="'/songs/_form.html'"></div>
 </div>
