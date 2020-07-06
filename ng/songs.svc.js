@@ -17,4 +17,8 @@ angular.module("app")
       return $http.post("/api/songs/" + song.id + "/update", song);
     }
 
+    this.destroy = function(id){
+      return $http.delete("/api/songs/" + id);
+    }
+
   });

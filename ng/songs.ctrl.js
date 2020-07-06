@@ -67,4 +67,12 @@ angular.module("app")
       }
     }
 
+    $scope.destroySong = function(id){
+      if (confirm("Are you sure, you want to delete this song?")) {
+        SongsSvc.destroy(id).success(function(){
+          window.location.hash = "/songs";
+        });
+      }
+    }
+
   });

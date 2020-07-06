@@ -1,5 +1,6 @@
 <div class="container" ng-init="getSong()">
   <h1>{{song.title}}</h1><br />
   <p>{{song.note}}</p><br />
-  <a ng-href="/#/songs/{{song._id}}/edit">Edytuj</a>
+  <a ng-href="/#/songs/{{song._id}}/edit">Edytuj</a><br />
+  <button ng-click="destroySong(song._id)">Usuń</button>
 </div>

@@ -35,4 +35,11 @@ router.post("/:id/update", function(req,res,next){
   });
 });
 
+router.delete("/:id", function(req,res,next){
+  Song.deleteOne({_id: req.params.id}, function(err){
+    if(err) return next(err);
+    res.json(200);
+  })
+});
+
 module.exports = router;
