@@ -1,9 +1,14 @@
 var db = require("../db");
-var Song = db.model("Song", {
+
+
+var schema = new db.Schema({
   title: {type: String, require: true},
   note: {type: String, require: true}
+},
+{
+  timestamps: true
 });
 
-Song.schema.timestamps = true;
+var Song = db.model("Song",schema);
 
 module.exports = Song;
