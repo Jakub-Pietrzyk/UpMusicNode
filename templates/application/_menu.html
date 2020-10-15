@@ -14,7 +14,6 @@
 
     <div class="collapse navbar-collapse" id="mainMenu">
       <ul class="navbar-nav ml-auto nav-flex-icons align-items-center">
-
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
 
@@ -31,11 +30,11 @@
           </a>
 
           <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownBtn">
-            <h6 class="dropdown-header">qubix</h6>
+            <h6 class="dropdown-header">{{currentUser.name + " " + currentUser.surname }}</h6>
             <a href="/#/songs" class="dropdown-item">Profile</a>
             <a href="#" class="dropdown-item">Edit</a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">Log out</a>
+            <a ng-click="logOut()" href="#" class="dropdown-item">Log out</a>
           </div>
         </li>
 

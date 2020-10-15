@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Rejestracja</h1>
+    <br>
+    <form ng-submit="register(name, surname, email, password)">
+      <div class="form-group">
+        <label>Imię</label>
+        <input class="form-control" type="text" ng-model="name">
+      </div>
+      <div class="form-group">
+        <label>Nazwisko</label>
+        <input class="form-control" type="text" ng-model="surname">
+      </div>
+      <div class="form-group">
+        <label>email</label>
+        <input class="form-control" type="text" ng-model="email">
+      </div>
+      <div class="form-group">
+        <label>password</label>
+        <input class="form-control" type="password" ng-model="password">
+      </div>
+      <input class="btn btn-success btn-lg btn-block" type="submit" value="Zarejestruj">
+    </form>
+  </div>

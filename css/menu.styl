@@ -3,6 +3,10 @@
   background-color: $dark_blue
   color: $beige;
 
+.login-menu
+  background-color: $beige;
+  color: $dark_blue;
+
 .logo
   font-size: 25px;
 
@@ -16,6 +20,14 @@ a.nav-link
   -webkit-transition: background-color 0.1s
   &:hover
     background-color: $navbar_dark_blue
+
+a.nav-link.login
+  background-color: $beige;
+  transition: background-color 0.1s
+  -webkit-transition: background-color 0.1s
+  &:hover
+    background-color: $beige_light
+
 
 .dropdown-menu
   background-color: $beige
@@ -58,3 +70,6 @@ a.nav-link
 .dropdown.show .dropdown-menu
   max-height: 300px
   opacity: 1
+
+
+
